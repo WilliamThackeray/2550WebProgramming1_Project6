@@ -1,1 +1,183 @@
+<!-- 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
 
+
+Reflection:
+
+I personally super enjoyed this project. I loved getting more comfortable with CSS and especially flexbox/grid and I know those will be super duper helpful to master eventually. I'm excited to continue to work on this project and perfect as much as I can throughout the semester. I think there is more that can be done but for now I'm pretty proud of how it all worked out with the JS to change the content and getting everything to flow smoothly.
+
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="head">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link id="baseStyling" rel="stylesheet" href="creators.css">
+  <title>Content Creation 101</title>
+  <meta name="description" content="Become the Best Content Creator You Can Be">
+  <meta name="author" content="William Thackeray">
+  
+  
+  <!-- <link id="theme" rel="stylesheet" href="theme.css"> -->
+
+  <!-- JQuery Import -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-div">
+      <div>
+        <h1 id="pageTitle">Content Creation 101 </h1>
+      </div>
+    </div>
+    <h2>Creating Content and Building Communities</h2>
+  </header>
+  
+  
+  
+  <nav id="mainMenu">
+    <div>
+      <p class="home menuItem">Home</p>
+      <p class="streaming menuItem">Live&nbsp;Streaming</p>
+      <p class="videos menuItem">Videos</p>
+      <p class="community menuItem">Community</p>
+      <p class="branding menuItem">Branding</p>
+      <p class="visitor-log menuItem">Visitor Log</p>
+      <p id="toggle" >Toggle Theme</p>
+    </div>
+  </nav>
+  
+  <main>
+
+    <!-- Home Section -->
+    <section id="homeContent" class="home content shown">
+      <h1>Become the Best Content Creator You Can Be</h1>
+      <figure>
+        <div class="rightFig">
+          <img alt ="" src="images/deskPicture.jpg">
+        </div>
+      </figure>
+      <p>Content creation is one of the fastest growing desired occupations in the world right now. Never have more kids wanted to grow up to be creators rather than scientists or astronauts. Learning to become a content creator takes time, practice, and effort. Luckily, there isn't just one way to do it. Even just here, you'll see a few different way to be a content creator just on the site!<br><br>I primarily focus my content on video games. Video games is a pretty niche content area and is pretty saturated, but it's possible for anyone. My tips and suggestions will apply to all content creation areas though. Don't worry.</p>
+    </section>
+
+    <!-- Streaming Section -->
+    <section id="streamingContent" class="streaming content hide">
+      <h1>Live Streaming: Do's, Don'ts, Will's, and Won'ts</h1>
+      <figure>
+        <div class="leftFig">
+          <img alt="" src="images/thwkhero.jpg">
+        </div>
+      </figure>
+      <p>When it comes to live content, when first trying it out, it is hard. Getting comfortable talking to yourself and entertaining what seems like only a screen, comes with time and practice. Developing this skill can be done by anyone. One thing that helps out greatly is planning. Knowing the things you are going to talk about while do your activity is a big step in the right direction. This enables you to be talking and conversing when people show up to watch you and then can join right in and see your opinion first thing. When viewers join and watch, if they see someone quietly sitting, they are less proned to leaving right away and engaging them often brings them back in the future!</p>
+      
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videosContent" class="videos content hide">
+      <h1>Videos, Videos, Videos. The Good, the Bad, the Ugly.</h1>
+      <p>Videos are a great way to be a content creator. In fact, it was always something I wanted to do growing up! I dreamed about being able to make Minecraft Let's Plays and Call Of Duty videos, but I have come to the point where streaming is just as fun for me! Videos are something that has helped my twitch greatly! I have seen a lot of success from uploading videos along with my streams. <br><br>Whatever content you are choosing to create, there are going to be people out ther who want to watch your stuff. This is one reason why uploading videos is importing for advertising for you channel! One important thing I'll focus on here, is thumbnails. Thumbnails for your videos are so so so important. I can't stress that enough. Having a good thumbnail for a video could be the difference between a huge success, and a large flop. Here are two examples of my own thumbnails below.</p>
+      <div id="thumbnails">
+        <figure> <!-- Good Thumbnail-->
+          <img src="images/RailgunnerThumbnail2.png">
+          <figcaption>Good Thumbnail</figcaption>
+        </figure>
+        <figure> <!-- Bad Thumbnail-->
+          <img src="images/VoidFiendMithrixFight.png">
+          <figcaption>Bad Thumbnail</figcaption>
+        </figure>
+      </div>
+      <p>Looking at these, I'm sure you can tell which one is better very easily. The left thumbnail is much more enticing and entertaining. These kinds of thumbnails are great to get people to click into your video because they see something they want to see more of. In my right thumbnail, it's pretty bland. Although it shows what the content of the video is, it's not a grasping thumbnail. I learned from this because I didn't actually spend as much time as I should have planning and creating this second thunbnail, and thus, the video was wildy less successful.</p>
+    </section>
+
+    <!-- Community Section -->
+    <section id="communityContent" class="content hide">
+      <h1>Building A Community</h1>
+      <div class="leftFig">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/F30tocEXB6A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p>Community building is an important thing when it comes to content creation. This starts with your very first piece of content. If it's a video, you start to respond to every comment, showing people you want them with you and to be a part of what you are creating. If it's a viewer on your livestream, involving, communicating, and getting your other viewers to do the same with new viewers is HUGE when encoraging people to stay, watch, and come back time and time again. If it's other content, posts, blogs, etc, then these principles of interaction and friendliness apply big time. You want people to be engaged and want to come back to see more of what you have.</p>
+    </section>
+
+    <!-- Branding Section -->
+    <section id="brandingContent" class="content hide">
+      <h1>Branding. No, Not Like the Cows.</h1>
+      <figure>
+        <div class="rightFig">
+          <img alt="" src="images/ThackWhackLogo.png" width="300px" height="auto">
+        </div>
+      </figure>
+      <p>*** I did not have time to finish this page. But the functionality is still here ***</p>
+    </section>
+
+    <!-- Section for the Form -->
+    <section id="log-visit" class="content hide">
+      <h1>Visitor Form</h1>
+
+      <form id="visitor-form" novalidate>
+        <div id="form-div">
+        <fieldset id="basic"> <!-- Basic Info -->
+          <legend>Basic User Information</legend>
+            <label for="first-name">First Name<input id="first-name" type="text" name="fname" minlength="4" required></label>
+            <label for="last-name">Last Name<input id="last-name" type="text" name="lname"></label>
+            <label for="address">Address<input id="addres" type="text" name="address"></label>
+            <label for="city">City<input id="city" type="text" name="city"></label>
+            <label for="state">State<input id="state" type="text" name="state" required></label>
+            <label for="zip">Zip<input id="zip" type="number" name="zip" pattern="/[0-9]{5}/"></label>
+          </fieldset>
+
+        <fieldset id="contact"> <!-- Contact Info -->
+          <legend>Contact Information</legend>
+            <label for="phone">Phone<input id="phone" type="tel" name="phone" placeholder="000-123-4567" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}"></label>
+            <label for="email">Email<input id="email" type="email" name="email" placeholder="email@website.domain" pattern="\w+@\w+\.\w+" required></label>
+          </fieldset>
+        </div>
+
+        <div id="form-div2">
+        <fieldset id="discover"> <!-- Discovery Info-->
+          <legend>How Did You Find This Website?</legend>
+            <label for="telegram"><input id="telegram" type="checkbox" value="chosen" name="discover">Telegram</label>
+            <label for="gossip"><input id="gossip" type="checkbox" value="chosen" name="discover">Local Gossip</label>
+            <label for="grader"><input id="grader" type="checkbox" value="chosen" name="discover">I'm the Grader</label>
+            <div class="errorMsg"></div>
+          </fieldset>
+        <fieldset id="comments"> <!-- Comments -->
+          <legend>Comments</legend>
+            <label for="comments"><textarea id="comments" placeholder="Comments"></textarea></label>
+        </fieldset>
+        </div>
+
+        <div id="form-div3">
+          <input id="submitBtn" type="submit" value="Log Visit">
+        </div>
+      </form>
+    </section>
+
+    <!-- Thank You Section -->
+    <section id="thank-you" class="content hide">
+      <h1>Thanks for logging your visit!</h1>
+
+    </section>
+
+    <!-- JavaScript Here -->
+    <script src="js/creators.js"></script>
+    <script src="js/validation.js"></script>
+
+  </main>
+  
+  <footer>
+    <div>
+      <p>William Thackeray &bull; 2022</p>
+    </div>
+  </footer>
+</body>
+</html>

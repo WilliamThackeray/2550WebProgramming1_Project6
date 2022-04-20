@@ -1,0 +1,345 @@
+/*
+This is the CSS file for the Creators website.
+
+
+Web Colors: 
+1. Pinky  #FF17C6
+2. Pinky-Purple #B719E3
+3. Purple #8328FA
+4. Dark Blue #2919E3
+5. Blue #1C56FB
+6. Dark Gray #222
+7. Black #000
+8. Light Gray #999
+9. White #fff
+
+
+! COMMENT ABOUT CHANGES MADE IN THE REFACTOR !
+
+1. Edited menu to be not fixed
+2. Fixed menu so that the hover effect fills the whole space and not just the text 
+3. 
+
+
+
+
+*/
+
+
+
+/* The Defaults */
+
+* {box-sizing: border-box;}
+
+:root {
+  --purple-color: #8328FA;
+  --font-color: white;
+  --bg-color: #222;
+  --highlight-color: #FF17C6;
+  --form-requred: rgb(223, 179, 255);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+}
+
+
+
+/* ------------ For Large Screens ------------ */
+@media only screen and (min-width: 771px) {
+  body {
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: 
+      "header header header header header header header header header header header header"
+      "header header header header header header header header header header header header"
+      ". menu main main main main main main main main main main"
+      ". menu main main main main main main main main main main"
+      ". menu main main main main main main main main main main"
+      ". . main main main main main main main main main main"
+      ". . main main main main main main main main main main"
+      "footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+  nav#mainMenu  {
+    /* Grid Things */
+    grid-area: menu;
+    background-color: var(--purple-color);
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  
+    /* Everything Else */
+    border-radius: 1.3rem;
+  }
+  nav p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--font-color);
+    text-decoration: none;
+    display: block;
+    padding: 1rem 1rem;
+}
+  main {
+    /* Grid Things */
+    grid-area: main;
+    background-color: var(--bg-color);
+    padding: 2rem;
+    margin-left: 3.5rem;
+  
+    /* Everything Else */
+    color: var(--font-color);
+  }
+}
+
+
+/* ------------ For Small Screens ------------ */
+@media only screen and (max-width: 770px) {
+  body {
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+      "header header header header header header header header header header header header"
+      ". menu menu menu menu menu menu menu menu menu . ."
+      ". main main main main main main main main main main ."
+      ". main main main main main main main main main main ."
+      "footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+  nav#mainMenu  {
+    /* Grid Things */
+    grid-area: menu;
+    background-color: var(--purple-color);
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  
+    /* Everything Else */
+    border-radius: 1.3rem;
+  }
+  nav p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--font-color);
+    text-decoration: none;
+    display: block;
+    padding: 1rem 1rem;
+}
+  main {
+    /* Grid Things */
+    grid-area: main;
+    background-color: var(--bg-color);
+    padding: 1rem;
+    margin: 0;
+  
+    /* Everything Else */
+    color: var(--font-color);
+  }
+}
+@media only screen and (min-width: 1090px) {
+  main #visitor-form {
+    display: flex;
+    flex-direction: column;
+  }
+  main #form-div, main #form-div2, main #form-div3 {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem;
+  }
+}
+@media only screen and (max-width: 1089px) {
+  main #visitor-form {
+    display: flex;
+    flex-direction: column;
+  }
+  main #form-div, main #form-div2, main #form-div3 {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+  }
+}
+
+
+/* ------------  Header  ------------ */
+header {
+  /* Grid Things */
+  grid-area: header;
+  justify-self: stretch;
+
+  /* Everything Else */
+  background-color: var(--purple-color);
+  background-image: linear-gradient(var(--purple-color), var(--bg-color));
+  color: var(--font-color);
+
+  padding: 2rem;
+  margin: 0;
+  text-align: center;
+}
+header #pageTitle {
+  font-size: 3rem;
+}
+header .header-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .header-div img {
+  padding: 1rem
+}
+header .header-div svg {
+  width: 100px;
+  height: auto;
+  margin: 0;
+  padding: 1rem;
+  color: var(--font-color);
+}
+header .fa-solid {
+  color: var(--font-color);
+}
+
+/* ------------  Nav  ------------ */
+
+
+nav .home:hover, nav .streaming:hover, nav .videos:hover, nav .community:hover, nav .branding:hover, nav #toggle:hover, .visitor-log:hover { /* Removes hover property for the current page */
+  color: var(--highlight-color);
+  cursor: pointer;
+  background-color: white;
+}
+
+/* ------------  Body  ------------ */
+
+.hide {
+  display: none;
+}
+
+main #homeContent figure .rightFig, main #videosContent figure .rightFig, main #brandingContent figure .rightFig {
+  float: right;
+  /* margin: 0.75rem; */
+  padding: 1rem;
+  text-align: center;
+}
+main #streamingContent figure .leftFig, main #communityContent figure .leftFig {
+  float: left;
+  /* margin: 0.75rem; */
+  padding: 1rem;
+  text-align: center;
+}
+main #homeContent figure img, main #videosContent figure img, main #brandingContent figure img, main #streamingContent figure img, main #communityContent figure img { 
+  max-width: 100%;
+  height: auto;
+}
+main #homeContent div, main #videosContent div, main #brandingContent div, main #streamingContent div, main #communityContent div {
+  width: 60%;
+}
+main img {
+  border: 2px var(--font-color) solid;
+  border-radius: 5px;
+}
+main #thumbnails {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+main #thumbnails img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form CSS */
+
+main #message{
+  display: flex;
+  order: 5;
+}
+main #message > texarea {
+  flex: 1;
+  min-width: 10rem;
+  width: 100%;
+}
+main #basic {
+  order: 1;
+  margin: 1rem;
+  flex: 1;
+}
+main #contact {
+  flex: 1;
+  margin: 1rem;
+  order: 2;
+}
+main #discover {
+  flex: 1;
+  margin: 1rem;
+  order: 3;
+}
+main #comments {
+  flex: 1;
+  margin: 1rem;
+  order: 4;
+}
+main #submit {
+  order: 6;
+  width: 6rem;
+}
+main #form-div3 {
+  justify-content: center;
+  height: 3rem;
+}
+main #visitor-form {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+main #visitor-form fieldset {
+  border: 3px var(--highlight-color) double;
+}
+main #visitor-form legend {
+  font-size: 0.8rem;
+}
+main #visitor-form label {
+  margin: .5rem;
+}
+#visitor-form label,  #visitor-form [type=text], #visitor-form [type=number], #visitor-form [type=email], #visitor-form [type=tel], #visitor-form textarea {
+  display: block;
+}
+#visitor-form [type=text], #visitor-form [type=number], #visitor-form [type=email], #visitor-form [type=tel], #visitor-form textarea {
+  font-family: "Roboto", sans-serif;
+  border: solid var(--purple-color) 1px;
+  border-radius: 0.25rem;
+  padding: 0.5vw;
+  width: 300px;
+  font-weight: 300;
+}
+#visitor-form textarea {
+  height: 8rem;
+  width: 317px;
+  flex: 1;
+}
+#visitor-form :required {
+  background-color: var(--form-requred);
+}
+/* ------------  Footer  ------------ */
+footer {
+  /* Grid Things */
+  grid-area: footer;
+  padding: 2rem;
+
+  /* Everything Else */
+  background-color: var(--purple-color);
+  background-image: linear-gradient(var(--bg-color), var(--purple-color));
+  color: var(--font-color);
+  text-align: center;
+}
