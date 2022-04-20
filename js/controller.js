@@ -46,6 +46,7 @@ $(document).ready(function() {
   $('.visitors').click(function(){
     $('.content').hide();
     $('#log-visit').show();
+    showVisitors(); // this should show the visitors table
   });
   
   

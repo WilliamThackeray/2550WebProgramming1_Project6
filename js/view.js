@@ -12,6 +12,8 @@ function showList() {
 
 function showForm() {
   // shows visitor form and hides list 
+  $("visitor-form").hide();
+  $("visitor-list").show();
 }
 
 function clearForm() {
