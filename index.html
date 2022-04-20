@@ -52,7 +52,7 @@ I personally super enjoyed this project. I loved getting more comfortable with C
       <p class="videos menuItem">Videos</p>
       <p class="community menuItem">Community</p>
       <p class="branding menuItem">Branding</p>
-      <p class="visitor-log menuItem">Visitor Log</p>
+      <p class="visitors menuItem">Visitor Log</p>
       <p id="toggle" >Toggle Theme</p>
     </div>
   </nav>
@@ -121,45 +121,52 @@ I personally super enjoyed this project. I loved getting more comfortable with C
 
     <!-- Section for the Form -->
     <section id="log-visit" class="content hide">
-      <h1>Visitor Form</h1>
+      <h1>Visitors</h1>
 
-      <form id="visitor-form" novalidate>
-        <div id="form-div">
-        <fieldset id="basic"> <!-- Basic Info -->
-          <legend>Basic User Information</legend>
-            <label for="first-name">First Name<input id="first-name" type="text" name="fname" minlength="4" required></label>
-            <label for="last-name">Last Name<input id="last-name" type="text" name="lname"></label>
-            <label for="address">Address<input id="addres" type="text" name="address"></label>
-            <label for="city">City<input id="city" type="text" name="city"></label>
-            <label for="state">State<input id="state" type="text" name="state" required></label>
-            <label for="zip">Zip<input id="zip" type="number" name="zip" pattern="/[0-9]{5}/"></label>
-          </fieldset>
+      <div id="visitor-form" class="hide">
+        <form id="visitors" novalidate>
+          <div id="form-div">
+            <fieldset id="basic"> <!-- Basic Info -->
+              <legend>Basic User Information</legend>
+                <label for="first-name">First Name<input id="first-name" type="text" name="fname" minlength="4" required></label>
+                <label for="last-name">Last Name<input id="last-name" type="text" name="lname"></label>
+                <label for="address">Address<input id="addres" type="text" name="address"></label>
+                <label for="city">City<input id="city" type="text" name="city"></label>
+                <label for="state">State<input id="state" type="text" name="state" required></label>
+                <label for="zip">Zip<input id="zip" type="number" name="zip" pattern="/[0-9]{5}/"></label>
+              </fieldset>
 
-        <fieldset id="contact"> <!-- Contact Info -->
-          <legend>Contact Information</legend>
-            <label for="phone">Phone<input id="phone" type="tel" name="phone" placeholder="000-123-4567" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}"></label>
-            <label for="email">Email<input id="email" type="email" name="email" placeholder="email@website.domain" pattern="\w+@\w+\.\w+" required></label>
-          </fieldset>
-        </div>
+            <fieldset id="contact"> <!-- Contact Info -->
+              <legend>Contact Information</legend>
+                <label for="phone">Phone<input id="phone" type="tel" name="phone" placeholder="000-123-4567" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}"></label>
+                <label for="email">Email<input id="email" type="email" name="email" placeholder="email@website.domain" pattern="\w+@\w+\.\w+" required></label>
+              </fieldset>
+            </div>
 
-        <div id="form-div2">
-        <fieldset id="discover"> <!-- Discovery Info-->
-          <legend>How Did You Find This Website?</legend>
-            <label for="telegram"><input id="telegram" type="checkbox" value="chosen" name="discover">Telegram</label>
-            <label for="gossip"><input id="gossip" type="checkbox" value="chosen" name="discover">Local Gossip</label>
-            <label for="grader"><input id="grader" type="checkbox" value="chosen" name="discover">I'm the Grader</label>
-            <div class="errorMsg"></div>
-          </fieldset>
-        <fieldset id="comments"> <!-- Comments -->
-          <legend>Comments</legend>
-            <label for="comments"><textarea id="comments" placeholder="Comments"></textarea></label>
-        </fieldset>
-        </div>
+            <div id="form-div2">
+            <fieldset id="discover"> <!-- Discovery Info-->
+              <legend>How Did You Find This Website?</legend>
+                <label for="telegram"><input id="telegram" type="checkbox" value="chosen" name="discover">Telegram</label>
+                <label for="gossip"><input id="gossip" type="checkbox" value="chosen" name="discover">Local Gossip</label>
+                <label for="grader"><input id="grader" type="checkbox" value="chosen" name="discover">I'm the Grader</label>
+                <div class="errorMsg"></div>
+              </fieldset>
+            <fieldset id="comments"> <!-- Comments -->
+              <legend>Comments</legend>
+                <label for="comments"><textarea id="comments" placeholder="Comments"></textarea></label>
+            </fieldset>
+          </div>
 
-        <div id="form-div3">
-          <input id="submitBtn" type="submit" value="Log Visit">
-        </div>
-      </form>
+          <div id="form-div3">
+            <input id="submitBtn" type="submit" value="Log Visit">
+          </div>
+        </form>
+      </div>
+
+      <div id="visitor-list">
+
+      </div>
+   
     </section>
 
     <!-- Thank You Section -->
@@ -168,8 +175,9 @@ I personally super enjoyed this project. I loved getting more comfortable with C
 
     </section>
 
+
     <!-- JavaScript Here -->
-    <script src="js/creators.js"></script>
+    <script src="js/controller.js"></script>
     <script src="js/validation.js"></script>
 
   </main>

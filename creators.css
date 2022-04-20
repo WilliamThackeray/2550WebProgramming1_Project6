@@ -150,7 +150,7 @@ body {
   }
 }
 @media only screen and (min-width: 1090px) {
-  main #visitor-form {
+  main #visitors {
     display: flex;
     flex-direction: column;
   }
@@ -161,7 +161,7 @@ body {
   }
 }
 @media only screen and (max-width: 1089px) {
-  main #visitor-form {
+  main #visitors {
     display: flex;
     flex-direction: column;
   }
@@ -213,7 +213,7 @@ header .fa-solid {
 /* ------------  Nav  ------------ */
 
 
-nav .home:hover, nav .streaming:hover, nav .videos:hover, nav .community:hover, nav .branding:hover, nav #toggle:hover, .visitor-log:hover { /* Removes hover property for the current page */
+nav .home:hover, nav .streaming:hover, nav .videos:hover, nav .community:hover, nav .branding:hover, nav #toggle:hover, .visitors:hover { /* Removes hover property for the current page */
   color: var(--highlight-color);
   cursor: pointer;
   background-color: white;
@@ -297,25 +297,25 @@ main #form-div3 {
   justify-content: center;
   height: 3rem;
 }
-main #visitor-form {
+main #visitors {
   display: flex;
   /* flex-direction: row; */
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-main #visitor-form fieldset {
+main #visitors fieldset {
   border: 3px var(--highlight-color) double;
 }
-main #visitor-form legend {
+main #visitors legend {
   font-size: 0.8rem;
 }
-main #visitor-form label {
+main #visitors label {
   margin: .5rem;
 }
-#visitor-form label,  #visitor-form [type=text], #visitor-form [type=number], #visitor-form [type=email], #visitor-form [type=tel], #visitor-form textarea {
+#visitors label,  #visitors [type=text], #visitors [type=number], #visitors [type=email], #visitors [type=tel], #visitors textarea {
   display: block;
 }
-#visitor-form [type=text], #visitor-form [type=number], #visitor-form [type=email], #visitor-form [type=tel], #visitor-form textarea {
+#visitors [type=text], #visitors [type=number], #visitors [type=email], #visitors [type=tel], #visitors textarea {
   font-family: "Roboto", sans-serif;
   border: solid var(--purple-color) 1px;
   border-radius: 0.25rem;
@@ -323,12 +323,12 @@ main #visitor-form label {
   width: 300px;
   font-weight: 300;
 }
-#visitor-form textarea {
+#visitors textarea {
   height: 8rem;
   width: 317px;
   flex: 1;
 }
-#visitor-form :required {
+#visitors :required {
   background-color: var(--form-requred);
 }
 /* ------------  Footer  ------------ */
