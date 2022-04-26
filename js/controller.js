@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   initValidation(); // sets up submit handling
 
-
+});
 
 
   // <---------- Code Below for hiding/showing content on a page ---------->  //
@@ -46,7 +46,7 @@ $(document).ready(function() {
   $('.visitors').click(function(){
     $('.content').hide();
     $('#log-visit').show();
-    showVisitors(); // this should show the visitors table
+    loadVisitors(); // this should show the visitors table
   });
   
   
@@ -56,7 +56,6 @@ $(document).ready(function() {
   let bool = false;
   
   $("#toggle").click(function(){
-    console.log("Clicked");
     // check if theme.css is in head
     if (bool) {
       $("#theme").remove();
@@ -66,13 +65,15 @@ $(document).ready(function() {
       bool = true;
     }
   });
-});
 
 
 // Functions to be used below //
 
 function loadVisitors() {
   // called when visitors menu item is clicked 
+  showVisitors();
+  renderTable('visitor-list', visitors);
+  showList();
 }
 
 function submitForm() {
